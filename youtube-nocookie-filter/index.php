@@ -21,7 +21,7 @@
  */
 function filter_youtube_embed( $cached_html, $url = null ) {
 
-	// Search for youtu to return true for both youtube.com and youtu.be URLs
+	// Search for both youtube.com and youtu.be URLs
 	if ( strpos( $url, 'youtu.be' ) or strpos( $url, 'youtube.com' ) ) {
 		$cached_html = preg_replace( '/youtube\.com\/(v|embed)\//s', 'youtube-nocookie.com/$1/', $cached_html );
 	}
